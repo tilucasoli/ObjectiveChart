@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031764E926A8619C00A3D518 /* ChartComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 031764E726A8619C00A3D518 /* ChartComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		031764EA26A8619C00A3D518 /* ChartController.h in Headers */ = {isa = PBXBuildFile; fileRef = 031764E826A8619C00A3D518 /* ChartController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03CE189526A855A000868F66 /* ObjectiveChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CE188B26A855A000868F66 /* ObjectiveChart.framework */; };
 		03CE189A26A855A000868F66 /* ObjectiveChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CE189926A855A000868F66 /* ObjectiveChartTests.m */; };
 		03CE189C26A855A000868F66 /* ObjectiveChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 03CE188E26A855A000868F66 /* ObjectiveChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +25,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		031764E726A8619C00A3D518 /* ChartComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartComponent.h; sourceTree = "<group>"; };
+		031764E826A8619C00A3D518 /* ChartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartController.h; sourceTree = "<group>"; };
 		03CE188B26A855A000868F66 /* ObjectiveChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectiveChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03CE188E26A855A000868F66 /* ObjectiveChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveChart.h; sourceTree = "<group>"; };
 		03CE188F26A855A000868F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031764E626A8619C00A3D518 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				031764E726A8619C00A3D518 /* ChartComponent.h */,
+				031764E826A8619C00A3D518 /* ChartController.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		03CE188126A855A000868F66 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +84,7 @@
 		03CE188D26A855A000868F66 /* ObjectiveChart */ = {
 			isa = PBXGroup;
 			children = (
+				031764E626A8619C00A3D518 /* Protocols */,
 				03CE188E26A855A000868F66 /* ObjectiveChart.h */,
 				03CE188F26A855A000868F66 /* Info.plist */,
 			);
@@ -93,7 +107,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031764EA26A8619C00A3D518 /* ChartController.h in Headers */,
 				03CE189C26A855A000868F66 /* ObjectiveChart.h in Headers */,
+				031764E926A8619C00A3D518 /* ChartComponent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ChartComponent.h"
+#import <ObjectiveChart/ChartComponent.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
