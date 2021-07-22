@@ -6,10 +6,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol ChartComponent <NSObject>
+
+@property NSString* name;
+@property UIColor* color;
+@property NSInteger thinkness;
 
 @end
 

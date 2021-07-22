@@ -12,26 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ChartController <NSObject>
 @required
+
+@property UIView* backgroundView;
+@property NSMutableArray* database;
+
 - (void) reloadData;
 - (UIView *) pointView: (id<ChartComponent>) chartComponent;
 - (UIView *) didSelected: (id<ChartComponent>) selectedChartComponent;
 @end
 
 NS_ASSUME_NONNULL_END
-
-    //protocol ChartComponent: UIView {
-    //    var name: String
-    //    var color: UIColor
-    //    var thinkness: Int
-    //}
-    //
-    //protocol ChartController {
-    //    var backgroundView: UIView
-    //    var database: [ChartComponent]
-    //
-    //        // Caso seja necessario!
-    //    func reloadData() -> Void
-    //
-    //    func pointView(chartComponent: ChartComponent) -> UIView
-    //    func didSelected(selectedChartComponent: ChartComponent) -> UIView
-    //}
