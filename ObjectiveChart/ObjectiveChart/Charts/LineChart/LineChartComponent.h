@@ -9,15 +9,10 @@
 #define LineChartComponent_h
 
 #import <UIKit/UIKit.h>
-#import "LineChartData.h"
+#import <ObjectiveChart/ChartComponent.h>
+#import <ObjectiveChart/LineChartData.h>
 
-@interface LineChartComponent : NSObject
-
-@property (nonnull) NSString *lineName;
-
-@property (nonnull) UIColor *lineColor;
-
-@property NSInteger lineThickness;
+@interface LineChartComponent : NSObject<ChartComponent>
 
 @property (nonnull) NSArray<LineChartData*> *pointData;
 

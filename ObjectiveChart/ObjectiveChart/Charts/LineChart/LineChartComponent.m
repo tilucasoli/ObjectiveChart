@@ -11,11 +11,17 @@
 
 @implementation LineChartComponent
 
-- (id)initWithName:(NSString *)name color:(UIColor *)color thickness:(NSInteger)thickness data:(NSArray<LineChartData*>*)data {
-    self.lineName = name;
-    self.lineColor = color;
-    self.lineThickness = thickness;
-    self.pointData = data;
+@synthesize name;
+
+@synthesize color;
+
+@synthesize thickness;
+
+- (id)initWithName:(NSString *)lineName color:(UIColor *)lineColor thickness:(NSInteger)lineThickness data:(NSArray<LineChartData*>*)lineData {
+    name = lineName;
+    color = lineColor;
+    thickness = lineThickness;
+    self.pointData = lineData;
     return self;
 }
 

@@ -16,6 +16,7 @@
 		96B7EB5926AAE787005453B7 /* LineChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EB5826AAE787005453B7 /* LineChartData.m */; };
 		96B7EB5B26AAEDE0005453B7 /* LineChartComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B7EB5A26AAEDE0005453B7 /* LineChartComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96B7EB5D26AAEE95005453B7 /* LineChartComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EB5C26AAEE95005453B7 /* LineChartComponent.m */; };
+		96B7EB5F26AAF2B7005453B7 /* LineChartController.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B7EB5E26AAF2B7005453B7 /* LineChartController.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		96B7EB5826AAE787005453B7 /* LineChartData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineChartData.m; sourceTree = "<group>"; };
 		96B7EB5A26AAEDE0005453B7 /* LineChartComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineChartComponent.h; sourceTree = "<group>"; };
 		96B7EB5C26AAEE95005453B7 /* LineChartComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineChartComponent.m; sourceTree = "<group>"; };
+		96B7EB5E26AAF2B7005453B7 /* LineChartController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineChartController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				96B7EB5826AAE787005453B7 /* LineChartData.m */,
 				96B7EB5A26AAEDE0005453B7 /* LineChartComponent.h */,
 				96B7EB5C26AAEE95005453B7 /* LineChartComponent.m */,
+				96B7EB5E26AAF2B7005453B7 /* LineChartController.h */,
 			);
 			path = LineChart;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 				96B7EB5B26AAEDE0005453B7 /* LineChartComponent.h in Headers */,
 				031764EA26A8619C00A3D518 /* ChartController.h in Headers */,
 				96B7EB5726AAE28D005453B7 /* LineChartData.h in Headers */,
+				96B7EB5F26AAF2B7005453B7 /* LineChartController.h in Headers */,
 				03CE189C26A855A000868F66 /* ObjectiveChart.h in Headers */,
 				031764E926A8619C00A3D518 /* ChartComponent.h in Headers */,
 			);

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property NSString* name;
 @property UIColor* color;
-@property NSInteger thinkness;
+@property NSInteger thickness;
 
 @end
 
