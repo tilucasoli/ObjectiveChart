@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		031764E926A8619C00A3D518 /* ChartComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 031764E726A8619C00A3D518 /* ChartComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		031764EA26A8619C00A3D518 /* ChartController.h in Headers */ = {isa = PBXBuildFile; fileRef = 031764E826A8619C00A3D518 /* ChartController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		031764EF26A9955400A3D518 /* empty file in Resources */ = {isa = PBXBuildFile; fileRef = 031764EE26A9955400A3D518 /* empty file */; };
 		03CE189526A855A000868F66 /* ObjectiveChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CE188B26A855A000868F66 /* ObjectiveChart.framework */; };
 		03CE189A26A855A000868F66 /* ObjectiveChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CE189926A855A000868F66 /* ObjectiveChartTests.m */; };
 		03CE189C26A855A000868F66 /* ObjectiveChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 03CE188E26A855A000868F66 /* ObjectiveChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96B7EB5726AAE28D005453B7 /* LineChartData.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B7EB5626AAE28D005453B7 /* LineChartData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96B7EB5926AAE787005453B7 /* LineChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EB5826AAE787005453B7 /* LineChartData.m */; };
+		96B7EB5B26AAEDE0005453B7 /* LineChartComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B7EB5A26AAEDE0005453B7 /* LineChartComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96B7EB5D26AAEE95005453B7 /* LineChartComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EB5C26AAEE95005453B7 /* LineChartComponent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,13 +31,16 @@
 /* Begin PBXFileReference section */
 		031764E726A8619C00A3D518 /* ChartComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartComponent.h; sourceTree = "<group>"; };
 		031764E826A8619C00A3D518 /* ChartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartController.h; sourceTree = "<group>"; };
-		031764EE26A9955400A3D518 /* empty file */ = {isa = PBXFileReference; lastKnownFileType = text; path = "empty file"; sourceTree = "<group>"; };
 		03CE188B26A855A000868F66 /* ObjectiveChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectiveChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03CE188E26A855A000868F66 /* ObjectiveChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveChart.h; sourceTree = "<group>"; };
 		03CE188F26A855A000868F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03CE189426A855A000868F66 /* ObjectiveChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03CE189926A855A000868F66 /* ObjectiveChartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveChartTests.m; sourceTree = "<group>"; };
 		03CE189B26A855A000868F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B7EB5626AAE28D005453B7 /* LineChartData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineChartData.h; sourceTree = "<group>"; };
+		96B7EB5826AAE787005453B7 /* LineChartData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineChartData.m; sourceTree = "<group>"; };
+		96B7EB5A26AAEDE0005453B7 /* LineChartComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineChartComponent.h; sourceTree = "<group>"; };
+		96B7EB5C26AAEE95005453B7 /* LineChartComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineChartComponent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +74,7 @@
 		031764EC26A9950C00A3D518 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				031764EE26A9955400A3D518 /* empty file */,
+				96B7EB5526AAE277005453B7 /* LineChart */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -111,6 +117,17 @@
 			path = ObjectiveChartTests;
 			sourceTree = "<group>";
 		};
+		96B7EB5526AAE277005453B7 /* LineChart */ = {
+			isa = PBXGroup;
+			children = (
+				96B7EB5626AAE28D005453B7 /* LineChartData.h */,
+				96B7EB5826AAE787005453B7 /* LineChartData.m */,
+				96B7EB5A26AAEDE0005453B7 /* LineChartComponent.h */,
+				96B7EB5C26AAEE95005453B7 /* LineChartComponent.m */,
+			);
+			path = LineChart;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -118,7 +135,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B7EB5B26AAEDE0005453B7 /* LineChartComponent.h in Headers */,
 				031764EA26A8619C00A3D518 /* ChartController.h in Headers */,
+				96B7EB5726AAE28D005453B7 /* LineChartData.h in Headers */,
 				03CE189C26A855A000868F66 /* ObjectiveChart.h in Headers */,
 				031764E926A8619C00A3D518 /* ChartComponent.h in Headers */,
 			);
@@ -203,7 +222,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				031764EF26A9955400A3D518 /* empty file in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +239,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B7EB5D26AAEE95005453B7 /* LineChartComponent.m in Sources */,
+				96B7EB5926AAE787005453B7 /* LineChartData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
