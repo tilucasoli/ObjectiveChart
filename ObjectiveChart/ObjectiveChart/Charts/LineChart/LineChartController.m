@@ -68,14 +68,18 @@
 }
 
 - (void) drawChartLines:(CGRect)rect labelMargin: (float)labelMargin limitMargin: (float)limitMargin axisThickness: (float)axisThickness {
-    float higherPoint = FLT_MIN;
+    float highestPoint = FLT_MIN;
+    float lowestPoint = FLT_MAX;
     int maxPointCount = 0;
     
     for (LineChartComponent *line in self.database) {
         int pointCount = 0;
         for (LineChartData *point in line.pointData) {
-            if (point.value > higherPoint) {
-                higherPoint = point.value;
+            if (point.value > highestPoint) {
+                highestPoint = point.value;
+            }
+            if (point.value < lowestPoint) {
+                lowestPoint = point.value;
             }
             pointCount += 1;
         }
@@ -84,9 +88,12 @@
         }
     }
     
-    float xAxisFraction = (self.frame.size.width - labelMargin - limitMargin - axisThickness) / maxPointCount;
-    float yAxisFraction = (self.frame.size.height - labelMargin - limitMargin - axisThickness) / (higherPoint + 3);
+    NSLog(@"Highest point: %f", highestPoint);
+    NSLog(@"Lowest point: %f", lowestPoint);
     
+    float xAxisFraction = (self.frame.size.width - labelMargin - limitMargin - axisThickness) / maxPointCount;
+    float yAxisFraction = (self.frame.size.height - labelMargin - limitMargin - axisThickness) / ((highestPoint - lowestPoint) * 1.25);
+        
     for (LineChartComponent *line in self.database) {
         
         CGFloat prevX = labelMargin + axisThickness; // Initial value: label margin + axis thickness
@@ -97,7 +104,7 @@
             [path moveToPoint:CGPointMake(prevX, prevY)];
             
             CGFloat currentX = i * xAxisFraction;
-            CGFloat currentY = (self.frame.size.height - labelMargin - limitMargin - axisThickness) - (yAxisFraction * line.pointData[i-1].value);
+            CGFloat currentY = (self.frame.size.height - labelMargin - limitMargin - axisThickness) - (yAxisFraction * (line.pointData[i-1].value - lowestPoint));
             
             NSLog(@"X value: %f, Y value: %f", currentX, currentY);
             
