@@ -12,9 +12,9 @@
 
 @property (nonnull) NSString *dataName;
 
-@property NSInteger value;
+@property float value;
 
-- (id _Nonnull) initWithName: (NSString*_Nonnull)name value: (NSInteger)value;
+- (id _Nonnull) initWithName: (NSString*_Nonnull)name value: (float)value;
 
 @end
 

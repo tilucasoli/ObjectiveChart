@@ -21,3 +21,4 @@ FOUNDATION_EXPORT const unsigned char ObjectiveChartVersionString[];
 //MARK: LineChart
 #import <ObjectiveChart/LineChartData.h>
 #import <ObjectiveChart/LineChartComponent.h>
+#import <ObjectiveChart/LineChartController.h>

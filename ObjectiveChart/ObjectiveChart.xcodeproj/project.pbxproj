@@ -16,7 +16,8 @@
 		96B7EB5926AAE787005453B7 /* LineChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EB5826AAE787005453B7 /* LineChartData.m */; };
 		96B7EB5B26AAEDE0005453B7 /* LineChartComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B7EB5A26AAEDE0005453B7 /* LineChartComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96B7EB5D26AAEE95005453B7 /* LineChartComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EB5C26AAEE95005453B7 /* LineChartComponent.m */; };
-		96B7EB5F26AAF2B7005453B7 /* LineChartController.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B7EB5E26AAF2B7005453B7 /* LineChartController.h */; };
+		96B7EB5F26AAF2B7005453B7 /* LineChartController.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B7EB5E26AAF2B7005453B7 /* LineChartController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96B7EB6126AAFA21005453B7 /* LineChartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EB6026AAFA21005453B7 /* LineChartController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		96B7EB5A26AAEDE0005453B7 /* LineChartComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineChartComponent.h; sourceTree = "<group>"; };
 		96B7EB5C26AAEE95005453B7 /* LineChartComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineChartComponent.m; sourceTree = "<group>"; };
 		96B7EB5E26AAF2B7005453B7 /* LineChartController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineChartController.h; sourceTree = "<group>"; };
+		96B7EB6026AAFA21005453B7 /* LineChartController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineChartController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				96B7EB5A26AAEDE0005453B7 /* LineChartComponent.h */,
 				96B7EB5C26AAEE95005453B7 /* LineChartComponent.m */,
 				96B7EB5E26AAF2B7005453B7 /* LineChartController.h */,
+				96B7EB6026AAFA21005453B7 /* LineChartController.m */,
 			);
 			path = LineChart;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B7EB6126AAFA21005453B7 /* LineChartController.m in Sources */,
 				96B7EB5D26AAEE95005453B7 /* LineChartComponent.m in Sources */,
 				96B7EB5926AAE787005453B7 /* LineChartData.m in Sources */,
 			);

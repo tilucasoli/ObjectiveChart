@@ -10,7 +10,7 @@
 
 @implementation LineChartData
 
-- (id)initWithName:(NSString *)name value:(NSInteger)value {
+- (id)initWithName:(NSString *)name value:(float)value {
     self.dataName = name;
     self.value = value;
     return self;
