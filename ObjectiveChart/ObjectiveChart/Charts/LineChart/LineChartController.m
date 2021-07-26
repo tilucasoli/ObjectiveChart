@@ -31,12 +31,16 @@
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
     
-    [self drawChartBase:rect];
+    float chartMargin = self.frame.size.width / 7.8;
+    float chartLimit = self.frame.size.width / 31.2;
+    float chartThickness = self.frame.size.width / 78;
     
-    [self drawChartLines:rect];
+    [self drawChartBase:rect labelMargin:chartMargin limitMargin:chartLimit axisThickness:chartThickness];
+    
+    [self drawChartLines:rect labelMargin:chartMargin limitMargin:chartLimit axisThickness:chartThickness];
 }
 
-- (void) drawChartBase:(CGRect)rect {
+- (void) drawChartBase:(CGRect)rect labelMargin: (float)labelMargin limitMargin: (float)limitMargin axisThickness: (float)axisThickness {
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     const CGFloat* axisColorComponents = CGColorGetComponents(self.axisColor.CGColor);
@@ -47,39 +51,74 @@
     CGContextSetRGBStrokeColor(context, backgroundColorComp[0], backgroundColorComp[1], backgroundColorComp[2], CGColorGetAlpha(self.backgroundColor.CGColor));
     CGContextFillRect(context, chartBackground);
     
-    CGRect xAxis = CGRectMake(37.5, self.frame.size.height - 50, self.frame.size.width - 52.5, 7.5);
+    // X-axis length: frame width - label margin - limit margin - axis thickness
+    
+    CGRect xAxis = CGRectMake(labelMargin - limitMargin, self.frame.size.height - labelMargin, self.frame.size.width - labelMargin, axisThickness);
     CGContextSetRGBFillColor(context, axisColorComponents[0], axisColorComponents[1], axisColorComponents[2], CGColorGetAlpha(self.axisColor.CGColor));
     CGContextSetRGBStrokeColor(context, axisColorComponents[0], axisColorComponents[1], axisColorComponents[2], CGColorGetAlpha(self.axisColor.CGColor));
     CGContextFillRect(context, xAxis);
     
-    CGRect yAxis = CGRectMake(45, 15, 7.5, self.frame.size.height - 50);
+    // Y-axis length: frame height - label margin - limit margin - axis thickness
+    
+    CGRect yAxis = CGRectMake(labelMargin, limitMargin, axisThickness, self.frame.size.height - labelMargin);
     CGContextSetRGBFillColor(context, axisColorComponents[0], axisColorComponents[1], axisColorComponents[2], CGColorGetAlpha(self.axisColor.CGColor));
     CGContextSetRGBStrokeColor(context, axisColorComponents[0], axisColorComponents[1], axisColorComponents[2], CGColorGetAlpha(self.axisColor.CGColor));
     CGContextFillRect(context, yAxis);
     
 }
 
-- (void) drawChartLines:(CGRect)rect {
-    
+- (void) drawChartLines:(CGRect)rect labelMargin: (float)labelMargin limitMargin: (float)limitMargin axisThickness: (float)axisThickness {
     float higherPoint = FLT_MIN;
-    float lowerPoint = FLT_MAX;
+    int maxPointCount = 0;
     
     for (LineChartComponent *line in self.database) {
+        int pointCount = 0;
         for (LineChartData *point in line.pointData) {
-            if (point.value < lowerPoint) {
-                lowerPoint = point.value;
-            } else if (point.value > higherPoint) {
+            if (point.value > higherPoint) {
                 higherPoint = point.value;
             }
+            pointCount += 1;
+        }
+        if (pointCount > maxPointCount) {
+            maxPointCount = pointCount;
         }
     }
     
-    NSLog(@"Higher: %.2f", higherPoint);
-    NSLog(@"Lower: %.2f", lowerPoint);
+    float xAxisFraction = (self.frame.size.width - labelMargin - limitMargin - axisThickness) / maxPointCount;
+    float yAxisFraction = (self.frame.size.height - labelMargin - limitMargin - axisThickness) / (higherPoint + 3);
     
     for (LineChartComponent *line in self.database) {
-        for (LineChartData *point in line.pointData) {
+        
+        CGFloat prevX = labelMargin + axisThickness; // Initial value: label margin + axis thickness
+        CGFloat prevY = self.frame.size.height - labelMargin; // Initial value: frame height - label margin
+        
+        for (NSInteger i = 1; i <= line.pointData.count; i++) {
+            UIBezierPath *path = [UIBezierPath bezierPath];
+            [path moveToPoint:CGPointMake(prevX, prevY)];
             
+            CGFloat currentX = i * xAxisFraction;
+            CGFloat currentY = (self.frame.size.height - labelMargin - limitMargin - axisThickness) - (yAxisFraction * line.pointData[i-1].value);
+            
+            NSLog(@"X value: %f, Y value: %f", currentX, currentY);
+            
+            [path addLineToPoint:CGPointMake(currentX, currentY)];
+            
+            CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+            shapeLayer.path = [path CGPath];
+            shapeLayer.strokeColor = [line.color CGColor];
+            shapeLayer.lineWidth = line.thickness * 3;
+            shapeLayer.fillColor = [line.color CGColor];
+            
+            [self.layer addSublayer:shapeLayer];
+            
+            CAShapeLayer *circleLayer = [CAShapeLayer layer];
+            circleLayer.strokeColor = [line.color CGColor];
+            circleLayer.fillColor = [line.color CGColor];
+            [circleLayer setPath:[[UIBezierPath bezierPathWithOvalInRect:CGRectMake(currentX - shapeLayer.lineWidth, currentY - shapeLayer.lineWidth, shapeLayer.lineWidth * 2, shapeLayer.lineWidth * 2)] CGPath]];
+            [self.layer addSublayer:circleLayer];
+            
+            prevX = currentX;
+            prevY = currentY;
         }
     }
 }

@@ -20,9 +20,9 @@
 
 - (instancetype _Nonnull)initWithFrame:(CGRect)frame data: (NSArray<LineChartComponent*>*_Nonnull)data axisColor: (UIColor*_Nonnull)axisColor backgroundColor: (UIColor*_Nonnull)backgroundColor;
 
-- (void) drawChartBase:(CGRect)rect;
+- (void) drawChartBase:(CGRect)rect labelMargin: (float)labelMargin limitMargin: (float)limitMargin axisThickness: (float)axisThickness;
 
-- (void) drawChartLines:(CGRect)rect;
+- (void) drawChartLines:(CGRect)rect labelMargin: (float)labelMargin limitMargin: (float)limitMargin axisThickness: (float)axisThickness;
 
 @end
 
