@@ -88,9 +88,6 @@
         }
     }
     
-    NSLog(@"Highest point: %f", highestPoint);
-    NSLog(@"Lowest point: %f", lowestPoint);
-    
     float xAxisFraction = (self.frame.size.width - labelMargin - limitMargin - axisThickness) / maxPointCount;
     float yAxisFraction = (self.frame.size.height - labelMargin - limitMargin - axisThickness) / ((highestPoint - lowestPoint) * 1.25);
         
@@ -105,9 +102,7 @@
             
             CGFloat currentX = i * xAxisFraction;
             CGFloat currentY = (self.frame.size.height - labelMargin - limitMargin - axisThickness) - (yAxisFraction * (line.pointData[i-1].value - lowestPoint));
-            
-            NSLog(@"X value: %f, Y value: %f", currentX, currentY);
-            
+                        
             [path addLineToPoint:CGPointMake(currentX, currentY)];
             
             CAShapeLayer *shapeLayer = [CAShapeLayer layer];
