@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		031764E926A8619C00A3D518 /* ChartComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 031764E726A8619C00A3D518 /* ChartComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		031764EA26A8619C00A3D518 /* ChartController.h in Headers */ = {isa = PBXBuildFile; fileRef = 031764E826A8619C00A3D518 /* ChartController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0317658F26AA56C000A3D518 /* PieChartComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 0317658926AA56C000A3D518 /* PieChartComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0317659026AA56C000A3D518 /* PieChartController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0317658A26AA56C000A3D518 /* PieChartController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0317659126AA56C000A3D518 /* PieChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0317658B26AA56C000A3D518 /* PieChartData.m */; };
+		0317659226AA56C000A3D518 /* PieChartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0317658C26AA56C000A3D518 /* PieChartController.m */; };
+		0317659326AA56C000A3D518 /* PieChartComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0317658D26AA56C000A3D518 /* PieChartComponent.m */; };
+		0317659426AA56C000A3D518 /* PieChartData.h in Headers */ = {isa = PBXBuildFile; fileRef = 0317658E26AA56C000A3D518 /* PieChartData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0317659D26B02C7000A3D518 /* PieChartComponentDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0317659C26B02C7000A3D518 /* PieChartComponentDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03CE189526A855A000868F66 /* ObjectiveChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CE188B26A855A000868F66 /* ObjectiveChart.framework */; };
 		03CE189A26A855A000868F66 /* ObjectiveChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CE189926A855A000868F66 /* ObjectiveChartTests.m */; };
 		03CE189C26A855A000868F66 /* ObjectiveChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 03CE188E26A855A000868F66 /* ObjectiveChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +40,13 @@
 /* Begin PBXFileReference section */
 		031764E726A8619C00A3D518 /* ChartComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartComponent.h; sourceTree = "<group>"; };
 		031764E826A8619C00A3D518 /* ChartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartController.h; sourceTree = "<group>"; };
+		0317658926AA56C000A3D518 /* PieChartComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartComponent.h; sourceTree = "<group>"; };
+		0317658A26AA56C000A3D518 /* PieChartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartController.h; sourceTree = "<group>"; };
+		0317658B26AA56C000A3D518 /* PieChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartData.m; sourceTree = "<group>"; };
+		0317658C26AA56C000A3D518 /* PieChartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartController.m; sourceTree = "<group>"; };
+		0317658D26AA56C000A3D518 /* PieChartComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartComponent.m; sourceTree = "<group>"; };
+		0317658E26AA56C000A3D518 /* PieChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartData.h; sourceTree = "<group>"; };
+		0317659C26B02C7000A3D518 /* PieChartComponentDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieChartComponentDelegate.h; sourceTree = "<group>"; };
 		03CE188B26A855A000868F66 /* ObjectiveChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectiveChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03CE188E26A855A000868F66 /* ObjectiveChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveChart.h; sourceTree = "<group>"; };
 		03CE188F26A855A000868F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,8 +93,55 @@
 			isa = PBXGroup;
 			children = (
 				96B7EB5526AAE277005453B7 /* LineChart */,
+				0317658826AA56C000A3D518 /* PieChart */,
 			);
 			path = Charts;
+			sourceTree = "<group>";
+		};
+		0317658826AA56C000A3D518 /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				0317659B26B02BDD00A3D518 /* Delegate */,
+				0317659826AAE12E00A3D518 /* Data */,
+				0317659A26AAE14C00A3D518 /* Component */,
+				0317659926AAE13E00A3D518 /* Controller */,
+			);
+			path = PieChart;
+			sourceTree = "<group>";
+		};
+		0317659826AAE12E00A3D518 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0317658E26AA56C000A3D518 /* PieChartData.h */,
+				0317658B26AA56C000A3D518 /* PieChartData.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0317659926AAE13E00A3D518 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0317658A26AA56C000A3D518 /* PieChartController.h */,
+				0317658C26AA56C000A3D518 /* PieChartController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0317659A26AAE14C00A3D518 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				0317658926AA56C000A3D518 /* PieChartComponent.h */,
+				0317658D26AA56C000A3D518 /* PieChartComponent.m */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		0317659B26B02BDD00A3D518 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				0317659C26B02C7000A3D518 /* PieChartComponentDelegate.h */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		03CE188126A855A000868F66 = {
@@ -146,6 +207,7 @@
 				96B7EB5726AAE28D005453B7 /* LineChartData.h in Headers */,
 				96B7EB5F26AAF2B7005453B7 /* LineChartController.h in Headers */,
 				03CE189C26A855A000868F66 /* ObjectiveChart.h in Headers */,
+				0317659426AA56C000A3D518 /* PieChartData.h in Headers */,
 				031764E926A8619C00A3D518 /* ChartComponent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +311,9 @@
 				96B7EB6126AAFA21005453B7 /* LineChartController.m in Sources */,
 				96B7EB5D26AAEE95005453B7 /* LineChartComponent.m in Sources */,
 				96B7EB5926AAE787005453B7 /* LineChartData.m in Sources */,
+				0317659126AA56C000A3D518 /* PieChartData.m in Sources */,
+				0317659226AA56C000A3D518 /* PieChartController.m in Sources */,
+				0317659326AA56C000A3D518 /* PieChartComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

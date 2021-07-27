@@ -10,11 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ChartController <NSObject>
-@required
+@protocol ChartController
 
 @property UIView* backgroundView;
-@property NSArray* database;
+@property NSArray<id<ChartComponent>>* database;
 
 - (void) reloadData;
 - (UIView *) pointView: (id<ChartComponent>) chartComponent;
