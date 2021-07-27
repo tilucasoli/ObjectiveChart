@@ -5,9 +5,9 @@
 //  Created by Lucas Oliveira on 22/07/21.
 //
 
-#import <ObjectiveChart/PieChartController.h>
-#import <ObjectiveChart/PieChartComponent.h>
-#import <ObjectiveChart/ChartComponent.h>
+#import "PieChartController.h"
+#import <ObjectiveChart/Charts/PieChart/Component/PieChartComponent.h>
+#import <ObjectiveChart/Protocols/ChartComponent.h>
 
 @implementation PieChartController
 

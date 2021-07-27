@@ -9,8 +9,8 @@
 #define LineChartComponent_h
 
 #import <UIKit/UIKit.h>
-#import <ObjectiveChart/ChartComponent.h>
-#import <ObjectiveChart/LineChartData.h>
+#import <ObjectiveChart/Protocols/ChartController.h>
+#import <ObjectiveChart/Charts/LineChart/LineChartData.h>
 
 @interface LineChartComponent : NSObject<ChartComponent>
 

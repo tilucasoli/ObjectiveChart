@@ -6,7 +6,7 @@
 //
 
 #import "PieChartComponent.h"
-#import <ObjectiveChart/PieChartData.h>
+#import <ObjectiveChart/Charts/PieChart/Data/PieChartData.h>
 
 @implementation PieChartComponent
 

@@ -4,9 +4,9 @@
 //
 //  Created by Lucas Oliveira on 22/07/21.
 //
-#import <ObjectiveChart/ChartComponent.h>
-#import <ObjectiveChart/PieChartData.h>
-#import <ObjectiveChart/PieChartComponentDelegate.h>
+#import <ObjectiveChart/Protocols/ChartComponent.h>
+#import <ObjectiveChart/Charts/PieChart/Data/PieChartData.h>
+#import <ObjectiveChart/Charts/PieChart/Delegate/PieChartComponentDelegate.h>
 
 #ifndef PieChartComponent_h
 #define PieChartComponent_h

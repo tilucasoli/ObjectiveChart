@@ -19,6 +19,7 @@
 		03CE189526A855A000868F66 /* ObjectiveChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CE188B26A855A000868F66 /* ObjectiveChart.framework */; };
 		03CE189A26A855A000868F66 /* ObjectiveChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CE189926A855A000868F66 /* ObjectiveChartTests.m */; };
 		03CE189C26A855A000868F66 /* ObjectiveChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 03CE188E26A855A000868F66 /* ObjectiveChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03E484C426B07D4C00EA3DD1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03E484C326B07D4C00EA3DD1 /* README.md */; };
 		96B7EB5726AAE28D005453B7 /* LineChartData.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B7EB5626AAE28D005453B7 /* LineChartData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96B7EB5926AAE787005453B7 /* LineChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EB5826AAE787005453B7 /* LineChartData.m */; };
 		96B7EB5B26AAEDE0005453B7 /* LineChartComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 96B7EB5A26AAEDE0005453B7 /* LineChartComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,6 +54,7 @@
 		03CE189426A855A000868F66 /* ObjectiveChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03CE189926A855A000868F66 /* ObjectiveChartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveChartTests.m; sourceTree = "<group>"; };
 		03CE189B26A855A000868F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E484C326B07D4C00EA3DD1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		96B7EB5626AAE28D005453B7 /* LineChartData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineChartData.h; sourceTree = "<group>"; };
 		96B7EB5826AAE787005453B7 /* LineChartData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineChartData.m; sourceTree = "<group>"; };
 		96B7EB5A26AAEDE0005453B7 /* LineChartComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineChartComponent.h; sourceTree = "<group>"; };
@@ -147,8 +149,9 @@
 		03CE188126A855A000868F66 = {
 			isa = PBXGroup;
 			children = (
-				03CE188D26A855A000868F66 /* ObjectiveChart */,
-				03CE189826A855A000868F66 /* ObjectiveChartTests */,
+				03E484C326B07D4C00EA3DD1 /* README.md */,
+				03E484C526B07D5900EA3DD1 /* Sources */,
+				03E484C626B07D6200EA3DD1 /* Tests */,
 				03CE188C26A855A000868F66 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -180,6 +183,22 @@
 				03CE189B26A855A000868F66 /* Info.plist */,
 			);
 			path = ObjectiveChartTests;
+			sourceTree = "<group>";
+		};
+		03E484C526B07D5900EA3DD1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				03CE188D26A855A000868F66 /* ObjectiveChart */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		03E484C626B07D6200EA3DD1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				03CE189826A855A000868F66 /* ObjectiveChartTests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		96B7EB5526AAE277005453B7 /* LineChart */ = {
@@ -294,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E484C426B07D4C00EA3DD1 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

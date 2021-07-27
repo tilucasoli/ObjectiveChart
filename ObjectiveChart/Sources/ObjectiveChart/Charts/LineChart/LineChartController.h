@@ -9,8 +9,8 @@
 #define LineChartController_h
 
 #import <UIKit/UIKit.h>
-#import <ObjectiveChart/ChartController.h>
-#import <ObjectiveChart/LineChartComponent.h>
+#import <ObjectiveChart/Protocols/ChartController.h>
+#import <ObjectiveChart/Charts/LineChart/LineChartComponent.h>
 
 @interface LineChartController : UIView<ChartController>
 
