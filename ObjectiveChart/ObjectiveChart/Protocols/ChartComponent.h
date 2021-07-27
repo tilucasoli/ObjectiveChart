@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ChartComponent 
+@protocol ChartComponent
 
 @property NSString* title;
 @property UIColor* color;

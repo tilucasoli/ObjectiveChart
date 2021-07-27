@@ -11,9 +11,9 @@
 @interface PieChartData : NSObject
 
 @property NSString* title;
-@property int value;
+@property double value;
 
-- (id)initWithTitle:(NSString *)title value:(UIColor*)value;
+- (id)initWithTitle:(NSString *)title value:(double)value;
 
 @end
 #endif /* PieChartData_h */

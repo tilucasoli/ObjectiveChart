@@ -9,9 +9,9 @@
 
 @implementation PieChartData
 
-- (id)initWithTitle:(NSString *)title value:(UIColor*)value; {
-    title = title;
-    value = value;
+- (id)initWithTitle:(NSString *)title value:(double)value; {
+    self.title = title;
+    self.value = value;
     return self;
 }
 

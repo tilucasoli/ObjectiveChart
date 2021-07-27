@@ -22,3 +22,4 @@ FOUNDATION_EXPORT const unsigned char ObjectiveChartVersionString[];
 #import <ObjectiveChart/PieChartComponent.h>
 #import <ObjectiveChart/PieChartData.h>
 #import <ObjectiveChart/PieChartController.h>
+#import <ObjectiveChart/PieChartComponentDelegate.h>
