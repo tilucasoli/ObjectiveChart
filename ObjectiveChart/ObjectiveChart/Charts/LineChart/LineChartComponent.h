@@ -16,7 +16,7 @@
 
 @property (nonnull) NSArray<LineChartData*> *pointData;
 
-- (id _Nonnull) initWithName: (NSString* _Nonnull)name color: (UIColor* _Nonnull)color thickness: (NSInteger)thickness data: (NSArray<LineChartData*>* _Nonnull)data;
+- (id _Nonnull) initWithTitle: (NSString* _Nonnull)lineTitle color: (UIColor* _Nonnull)color thickness: (NSInteger)thickness data: (NSArray<LineChartData*>* _Nonnull)data;
 
 @end
 

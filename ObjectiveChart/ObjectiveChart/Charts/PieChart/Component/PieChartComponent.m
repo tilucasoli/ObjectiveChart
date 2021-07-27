@@ -14,7 +14,7 @@
 
 @synthesize title;
 @synthesize color;
-@synthesize thinkness;
+@synthesize thickness;;
 
 @synthesize startAngle;
 @synthesize endAngle;
