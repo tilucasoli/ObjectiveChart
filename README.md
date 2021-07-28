@@ -4,7 +4,7 @@
 
 In your Xcode tool bar, follow the following steps to install the dependency.
 ```path
-File > Swift Packages > Add Package Dependencie
+File > Swift Packages > Add Package Dependencies
 ```
 
 Then paste the repository url:
@@ -12,4 +12,4 @@ https://github.com/tilucasoli/ObjectiveChart and select the Main branch or the n
 
 ## Sample
 
-A sample project is available in Swift in the following repository: 
+A sample project is available in Swift in the following repository: https://github.com/Silmunia/ObjectiveChartExample
