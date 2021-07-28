@@ -1,6 +1,7 @@
 ![Objective Chart](https://user-images.githubusercontent.com/62367544/127322215-bc1e1a9f-ffd6-49cc-b0b7-248d4da149fd.png)
 
 ![Release Tag](https://img.shields.io/github/v/tag/tilucasoli/ObjectiveChart?color=gre&label=Release)
+![SPM Tag](https://img.shields.io/badge/Swift_Package_Manager-Compatible-orange?style=flat)
 
 ## Introduction
 
