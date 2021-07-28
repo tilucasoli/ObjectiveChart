@@ -10,8 +10,10 @@
 
 @interface LineChartData : NSObject
 
+/*! @brief This property represents the name of a "section" of data. i.e.: if an instance represents "sales in January", this name would be "January"*/
 @property (nonnull) NSString *dataName;
 
+/*! @brief This property represents the value of a "section" of data. i.e.: if an instance represents "sales in January", this value would be the number of sales*/
 @property float value;
 
 - (id _Nonnull) initWithName: (NSString*_Nonnull)name value: (float)value;

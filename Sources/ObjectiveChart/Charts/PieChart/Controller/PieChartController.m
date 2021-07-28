@@ -147,17 +147,4 @@
     [self addConstraint:centerX];
 }
 
-// MARK: ChartComponent Protocol
-
-- (nonnull UIView *)didSelected:(nonnull id<ChartComponent>)selectedChartComponent {
-    return [UIView init];
-}
-
-- (nonnull UIView *)pointView:(nonnull id<ChartComponent>)chartComponent {
-    return [UIView init];
-}
-
-- (void)reloadData {
-}
-
 @end

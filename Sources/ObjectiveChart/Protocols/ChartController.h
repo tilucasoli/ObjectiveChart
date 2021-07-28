@@ -15,9 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property UIView* backgroundView;
 @property NSArray<id<ChartComponent>>* database;
 
-- (void) reloadData;
-- (UIView *) pointView: (id<ChartComponent>) chartComponent;
-- (UIView *) didSelected: (id<ChartComponent>) selectedChartComponent;
 @end
 
 NS_ASSUME_NONNULL_END

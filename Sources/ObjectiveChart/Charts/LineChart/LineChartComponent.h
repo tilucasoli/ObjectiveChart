@@ -14,6 +14,7 @@
 
 @interface LineChartComponent : NSObject<ChartComponent>
 
+/*! @brief This property stores the array of data representing each point along the line*/
 @property (nonnull) NSArray<LineChartData*> *pointData;
 
 - (id _Nonnull) initWithTitle: (NSString* _Nonnull)lineTitle color: (UIColor* _Nonnull)color thickness: (NSInteger)thickness data: (NSArray<LineChartData*>* _Nonnull)data;

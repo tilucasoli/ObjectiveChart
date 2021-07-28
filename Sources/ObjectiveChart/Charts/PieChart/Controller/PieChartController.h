@@ -12,8 +12,10 @@
 #define PieChartController_h
 
 @interface PieChartController : UIView <ChartController, PieChartComponentDelegate>
-@property CGFloat spacing;
+
+/*! @brief Value that controls the thickness of pieces in the pie chart*/
 @property CGFloat centerCircleRadius;
+
 @end
 
 #endif /* pieChartController_h */
