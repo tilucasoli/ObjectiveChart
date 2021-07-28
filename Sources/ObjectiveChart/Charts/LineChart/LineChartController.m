@@ -125,17 +125,4 @@
     }
 }
 
-- (nonnull UIView *)didSelected:(nonnull id<ChartComponent>)selectedChartComponent {
-    UIView *placeholder;
-    return placeholder;
-}
-
-- (nonnull UIView *)pointView:(nonnull id<ChartComponent>)chartComponent {
-    UIView *placeholder;
-    return placeholder;
-}
-
-- (void)reloadData {
-}
-
 @end

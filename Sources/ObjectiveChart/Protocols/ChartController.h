@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ObjectiveChart/ChartComponent.h>
+#import <ObjectiveChart/Protocols/ChartComponent.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,9 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property UIView* backgroundView;
 @property NSArray<id<ChartComponent>>* database;
 
-- (void) reloadData;
-- (UIView *) pointView: (id<ChartComponent>) chartComponent;
-- (UIView *) didSelected: (id<ChartComponent>) selectedChartComponent;
 @end
 
 NS_ASSUME_NONNULL_END

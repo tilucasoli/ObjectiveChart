@@ -5,9 +5,9 @@
 //  Created by Lucas Oliveira on 22/07/21.
 //
 
-#import <ObjectiveChart/PieChartController.h>
-#import <ObjectiveChart/PieChartComponent.h>
-#import <ObjectiveChart/ChartComponent.h>
+#import "PieChartController.h"
+#import <ObjectiveChart/Charts/PieChart/Component/PieChartComponent.h>
+#import <ObjectiveChart/Protocols/ChartComponent.h>
 
 @implementation PieChartController
 
@@ -145,19 +145,6 @@
     [self addConstraint:height];
     [self addConstraint:centerY];
     [self addConstraint:centerX];
-}
-
-// MARK: ChartComponent Protocol
-
-- (nonnull UIView *)didSelected:(nonnull id<ChartComponent>)selectedChartComponent {
-    return [UIView init];
-}
-
-- (nonnull UIView *)pointView:(nonnull id<ChartComponent>)chartComponent {
-    return [UIView init];
-}
-
-- (void)reloadData {
 }
 
 @end
