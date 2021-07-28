@@ -48,13 +48,10 @@
                       clockwise:YES];
 
     CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
+    
     shapeLayer.path = circlePath.CGPath;
-
-        //change the fill color
     shapeLayer.fillColor = [[UIColor clearColor] CGColor];
-        //you can change the stroke color
     shapeLayer.strokeColor = [color CGColor];
-        //you can change the line width
     shapeLayer.lineWidth = 2*_delegate.radius;
 
     [self.layer addSublayer:shapeLayer];

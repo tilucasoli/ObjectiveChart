@@ -13,7 +13,6 @@
 
 @synthesize backgroundView;
 @synthesize database;
-@synthesize spacing;
 @synthesize centerCircleRadius;
 
 //Delegate
