@@ -14,9 +14,19 @@
 @synthesize backgroundView;
 @synthesize database;
 @synthesize centerCircleRadius;
+@synthesize centerCircleBackgroundColor;
 
 //Delegate
 @synthesize radius;
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        centerCircleBackgroundColor = [UIColor blackColor];
+    }
+    return self;
+}
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -44,7 +54,7 @@
     }
 
     UIView *centerCircleView = [[UIView alloc] init];
-    centerCircleView.backgroundColor = [UIColor blackColor];
+    centerCircleView.backgroundColor = centerCircleBackgroundColor;
     centerCircleView.layer.cornerRadius = centerCircleRadius/2;
     centerCircleView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview: centerCircleView];

@@ -15,6 +15,7 @@
 
 /*! @brief Value that controls the thickness of pieces in the pie chart*/
 @property CGFloat centerCircleRadius;
+@property UIColor* centerCircleBackgroundColor;
 
 @end
 
