@@ -1,5 +1,7 @@
 ![Objective Chart](https://user-images.githubusercontent.com/62367544/127322215-bc1e1a9f-ffd6-49cc-b0b7-248d4da149fd.png)
 
+![Release Tag](https://img.shields.io/github/v/tag/tilucasoli/ObjectiveChart?color=gre&label=Release)
+
 ## Introduction
 
 ObjectiveChart is a framework developed in Objective-C to facilitate adding charts to your apps. Currently, there is support for two types of chart: line charts and pie charts.
