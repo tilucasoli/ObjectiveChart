@@ -17,6 +17,8 @@ File > Swift Packages > Add Package Dependencies
 Then paste the repository url:
 https://github.com/tilucasoli/ObjectiveChart and select the Main branch or the newest version
 
-## Sample
+## Sample Projects
 
 A sample project is available in Swift in the following repository: https://github.com/Silmunia/ObjectiveChartExample
+
+Another sample in Objective-C is available in: https://github.com/Silmunia/ObjectiveChartObjCExample
